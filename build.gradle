@@ -15,5 +15,9 @@ repositories {
 }
 
 dependencies {
+    compile "org.springframework:spring-context:${springVersion}"
+
+    testCompile "org.springframework:spring-test:${springVersion}"
+    testCompile "com.github.stefanbirkner:system-rules:${systemRulesVersion}"
     testCompile "junit:junit:${junitVersion}"
 }
