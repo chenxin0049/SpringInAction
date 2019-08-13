@@ -15,5 +15,8 @@ repositories {
 }
 
 dependencies {
+    compile "org.springframework:spring-context:${springVersion}"
+    
+    testCompile "org.mockito:mockito-core:${mockitoVersion}"
     testCompile "junit:junit:${junitVersion}"
 }
