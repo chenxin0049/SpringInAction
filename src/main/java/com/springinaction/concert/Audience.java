@@ -33,7 +33,9 @@ public class Audience {
         try{
             System.out.println("Silencing cell phones.");
             System.out.println("Taking seats.");
-            jp.proceed();
+
+            jp.proceed();    //将控制权交给被通知的方法
+
             System.out.println("CLAP CLAP CLAP!!!");
         }
         catch (Throwable e){
