@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'com.edu.hqu.training'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven {
+        url 'http://maven.aliyun.com/nexus/content/groups/public/'
+    }
+    mavenCentral()
+}
+
+dependencies {
+    compile "javax.servlet:javax.servlet-api:$servletVersion"
+    compile "org.springframework:spring-webmvc:$springVersion"
+    compile "javax.servlet:jstl:$jstlVersion"
+
+    testCompile "junit:junit:$junitVersion"
+    testCompile "org.springframework:spring-test:$springVersion"
+}
