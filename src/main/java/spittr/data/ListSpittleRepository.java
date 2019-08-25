@@ -39,4 +39,9 @@ public class ListSpittleRepository implements SpittleRepository {
             return null;
         }
     }
+
+    @Override
+    public void save(Spittle spittle) {
+        spittleList.add(spittle);
+    }
 }
