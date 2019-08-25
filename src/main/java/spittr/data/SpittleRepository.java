@@ -7,4 +7,5 @@ import java.util.List;
 public interface SpittleRepository {
     List<Spittle> findSpittles(long max, int count);
     Spittle findOne(int spittleId);
+    void save(Spittle spittle);
 }
