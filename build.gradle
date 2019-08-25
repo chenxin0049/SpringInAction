@@ -20,6 +20,7 @@ dependencies {
     compile "org.springframework:spring-webmvc:$springVersion"
     compile "javax.servlet:jstl:$jstlVersion"
     compile "org.hibernate:hibernate-validator:$hibernateValidatorVersion"
+    compile "org.thymeleaf:thymeleaf-spring4:$thymeleafVersion"
 
     testCompile "junit:junit:$junitVersion"
     testCompile "org.springframework:spring-test:$springVersion"
