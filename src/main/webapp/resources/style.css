@@ -1,3 +1,4 @@
+/* 正常页面 */
 body {
     font-family: sans-serif;
 }
@@ -30,4 +31,18 @@ body {
 
 .spittleForm h1 {
     font-size: 16pt;
+}
+
+/* 出错页面 */
+div.errors{
+    background-color: #ffcccc;
+    border: 2px solid red;
+}
+
+label.error{
+    color: red;
+}
+
+input.error{
+    background-color: #ffcccc;
 }
