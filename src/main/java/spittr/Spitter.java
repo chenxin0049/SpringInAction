@@ -1,33 +1,34 @@
 package spittr;
 
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 public class Spitter {
     private Long id;
-    @NotNull
-    @Size(min = 2, max = 30)
+    @Size(min = 2, max = 30, message = "{firstName.size}")
     private String firstName;
-    @NotNull
-    @Size(min = 2, max = 30)
+    @Size(min = 2, max = 30, message = "{lastName.size}")
     private String lastName;
-    @NotNull
-    @Size(min = 5, max = 16)
+    @Size(min = 5, max = 16, message = "{username.size}")
     private String username;
-    @NotNull
-    @Size(min = 5, max = 25)
+    @Size(min = 5, max = 25, message = "{password.size}")
     private String password;
+    @NotEmpty(message = "{email.notempty}")  // "NotNull" 不能判断 "" 所以使用 "NotEmpty"
+    @Email(message = "{email.valid}")
+    private String email;
 
     public Spitter(){}
-    public Spitter(String firstName, String lastName, String username, String password){
-        this(null, firstName, lastName, username, password);
+    public Spitter(String firstName, String lastName, String username, String password, String email){
+        this(null, firstName, lastName, username, password, email);
     }
-    public Spitter(Long id, String firstName, String lastName, String username, String password){
+    public Spitter(Long id, String firstName, String lastName, String username, String password, String email){
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.username = username;
         this.password = password;
+        this.email = email;
     }
 
     public void setId(Long id) {
@@ -59,5 +60,11 @@ public class Spitter {
     }
     public String getPassword() {
         return password;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public String getEmail() {
+        return email;
     }
 }
