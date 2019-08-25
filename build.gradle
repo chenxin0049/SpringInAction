@@ -19,7 +19,10 @@ dependencies {
     compile "javax.servlet:javax.servlet-api:$servletVersion"
     compile "org.springframework:spring-webmvc:$springVersion"
     compile "javax.servlet:jstl:$jstlVersion"
+    compile "org.hibernate:hibernate-validator:$hibernateValidatorVersion"
 
     testCompile "junit:junit:$junitVersion"
     testCompile "org.springframework:spring-test:$springVersion"
+    testCompile "org.mockito:mockito-core:$mockitoVersion"
+    testCompile "org.hamcrest:hamcrest-library:$hamcrestVersion"
 }
